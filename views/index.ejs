@@ -1,0 +1,39 @@
+<%- include('includes/header'); %>
+<% if(typeof (data) !== 'undefined') { %>
+    <h1><%= data.username %></h1>
+<% } %>
+
+
+<section class="container">
+    <div class="row">
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">Chat Control</div>
+
+                    <div class="card-body">
+                        <div id="chat-sidebar">
+                            <div id="sidebar-user-box" class="100">
+                                <img src="/assest/img/1.jpg"/>
+                                <span id="slider-username">test User</span>
+                                <span class="user_status online">&nbsp;</span>
+                            </div>
+                            <% students.forEach((student, index)=>{ %>
+                            <div id="sidebar-user-box" class="100">
+                                <img src="/assest/img/<%- student.img %>">
+                                <span id="slider-username"> <%- student.name %></span>
+                                <span class="user_status online">&nbsp;</span>
+                            </div>
+                            <% }) %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<%- include('includes/footere') %>

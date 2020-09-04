@@ -1,0 +1,14 @@
+<ul class="list-unstyled">
+    <% menus.forEach((menu, index)=>{ %>
+    <li><a href="<%= menu.url %>"> <%= menu.name %></a></li>
+    <% }) %>
+
+</ul>
+<ul class="list-unstyled">
+    <% students.forEach((student, index)=>{ %>
+          <li>
+              <img class=" img-thumbnail" style="    height: 130px;
+    width: 130px;" src="/assest/img/<%- student.img %>">
+          </li>
+    <% }) %>
+</ul>
