@@ -17,9 +17,24 @@
             <a class="nav-link" href="/home">home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/about">about</a>
+            <a class="nav-link" href="/logout">logout</a>
         </li>
 
 
     </ul>
 </nav>
+<% if(typeof (errors) !== 'undefined' && errors.length > 0){ %>
+    <div class="alert alert-danger">
+        <% for (error of errors ){ %>
+            <strong>Warning!</strong><%= error %> <br>
+        <% } %>
+    </div>
+<% } %>
+
+<% if(typeof (success) !== 'undefined' && success.length > 0){ %>
+    <div class="alert alert-success">
+        <% for (error of success ){ %>
+            <strong></strong><%= error %> <br>
+        <% } %>
+    </div>
+<% } %>

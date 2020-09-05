@@ -1,6 +1,6 @@
 /**** Chat Popup Layout******/
 body{
-	background:#e5e5e5;	
+	background:#e5e5e5;
 	font-family: sans-serif;
 }
 
@@ -12,7 +12,7 @@ body{
 	border-radius:5px 5px 0px 0px;
 }
 
-.msg_head{	
+.msg_head{
 	background:black;
 	color:white;
 	padding:8px;
@@ -34,9 +34,9 @@ body{
 	height: 55px;
 	border: 1px solid white;
 	border-top:1px solid #DDDDDD;
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing: border-box;   
-	box-sizing: border-box;  
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .close{
@@ -47,7 +47,7 @@ body{
 	float:right;
 	cursor:pointer;
 	padding-right:5px;
-	
+
 }
 
 .msg-left{
@@ -73,48 +73,82 @@ body{
 }
 /**** Slider Layout Popup *********/
 
- #chat-sidebar {
-     width: 250px;
-     position: fixed;
-     height: 100%;
-     right: 0px;
-     top: 0px;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     border: 1px solid #b2b2b2;
+#chat-sidebar {
+	width: 250px;
+	position: relative;
+	height: 100%;
+	right: 0px;
+	top: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px solid #b2b2b2;
 }
- #sidebar-user-box {
-     padding: 4px;
-     margin-bottom: 4px;
-     font-size: 15px;
-     font-family: Calibri;
-     font-weight:bold;
-     cursor:pointer;
+#sidebar-user-box {
+	padding: 4px;
+	margin-bottom: 4px;
+	font-size: 15px;
+	font-family: Calibri;
+	font-weight:bold;
+	cursor:pointer;
 }
- #sidebar-user-box:hover {
-     background-color:#999999 ;
+#sidebar-user-box:hover {
+	background-color:#999999 ;
 }
- #sidebar-user-box:after {
-     content: ".";
-     display: block;
-     height: 0;
-     clear: both;
-     visibility: hidden;
+#sidebar-user-box:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
- img{
-     width:35px;
-     height:35px;
-     border-radius:50%;
-     float:left;
+img{
+	width:35px;
+	height:35px;
+	border-radius:50%;
+	float:left;
 }
- #slider-username{
-     float:left;
-     line-height:30px;
-     margin-left:5px;
+#slider-username{
+	float:left;
+	line-height:30px;
+	margin-left:5px;
 }
- 
+
+.user_status{
+	float: right;
+	padding: 7px;
+	position: relative;
+	right: 0;
+	top: 10px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 50px;
+}
+
+.online{
+	color: #fff;
+	background-color: #090;
+}
 
 
+.offline{
+	color: #fff;
+	background-color: gray;
+}
+
+.dnd{
+	color: #fff;
+	background-color: #c33;
+}
+
+.bys{
+	color: #fff;
+	background-color: orange;
+}
 
 
 

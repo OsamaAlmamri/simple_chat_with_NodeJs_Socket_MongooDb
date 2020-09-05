@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <ul id="events" >
+
+    </ul>
+</head>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+<!--<script src="assest/js/socket.io.js"></script>-->
+<script>
+    const $event=document.getElementById('events');
+    const newItem=(content)=>{
+        const item=document.createElement('li');
+        item.innerText=content;
+        return item ;
+    }
+
+    const socket=io();
+    socket.on('connect',()=>{
+        $event.appendChild(newItem('connect'));
+    })
+
+    let couunter=0;
+    setInterval(()=>{
+        ++couunter ;
+        socket.emit('hey',{
+            couunter
+        },1000)
+    })
+
+    socket.on('hello',(couunter)=>{
+        $event.appendChild(newItem(`hello - ${couunter}`))
+    })
+
+
+</script>
+</body>
+</html>

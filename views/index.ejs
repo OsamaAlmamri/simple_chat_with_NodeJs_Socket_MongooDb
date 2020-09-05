@@ -10,20 +10,15 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Chat Control</div>
+                    <div class="card-header"><%=currentUser.name%></div>
 
                     <div class="card-body">
                         <div id="chat-sidebar">
-                            <div id="sidebar-user-box" class="100">
-                                <img src="/assest/img/1.jpg"/>
-                                <span id="slider-username">test User</span>
-                                <span class="user_status online">&nbsp;</span>
-                            </div>
-                            <% students.forEach((student, index)=>{ %>
-                            <div id="sidebar-user-box" class="100">
-                                <img src="/assest/img/<%- student.img %>">
-                                <span id="slider-username"> <%- student.name %></span>
-                                <span class="user_status online">&nbsp;</span>
+                            <% users.forEach((user, index)=>{ %>
+                            <div id="sidebar-user-box" class="user" uid="<%- user.id %>">
+                                <img src="/assest/img/<%- user.img %>">
+                                <span id="slider-username"><%- user.name %></span>
+                                <span class="user_status user_<%- user.id %>">&nbsp;</span>
                             </div>
                             <% }) %>
                         </div>
@@ -36,4 +31,8 @@
 
 </section>
 
+<script >
+    var user_id='<%-currentUser.id%>' ;
+    var username='<%-currentUser.name%>' ;
+</script>
 <%- include('includes/footere') %>
